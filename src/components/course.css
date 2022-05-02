@@ -1,0 +1,9 @@
+.course {
+  background-color: #0000004b;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.course h3 {
+  margin-top: 0;
+}

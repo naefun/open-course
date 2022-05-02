@@ -1,0 +1,17 @@
+.unit {
+  background-color: rgba(238, 238, 238, 0.541);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.unit h4 {
+  margin-top: 0;
+}
+
+.toggleDisplay {
+  display: none;
+}
+
+.toggler {
+  cursor: pointer;
+}

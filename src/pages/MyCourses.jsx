@@ -4,6 +4,7 @@ import Course from "../components/Course";
 import Unit from "../components/Unit";
 import { Context } from "../context/GlobalState";
 import axios from "axios";
+import Sidebar from "../components/Sidebar";
 
 function MyCourses() {
   const [state, dispatch] = useContext(Context);
@@ -55,7 +56,7 @@ function MyCourses() {
 
   return (
     <div className="myCoursesContainer">
-      <aside className="sideBar">
+      {/* <aside className="sideBar">
         <h2>Courses</h2>
         <ul className="courseList">
           {myCourses.map((course, i) => {
@@ -71,7 +72,21 @@ function MyCourses() {
             );
           })}
         </ul>
-      </aside>
+      </aside> */}
+      <Sidebar title="Courses">
+        {myCourses.map((course, i) => {
+          return (
+            <li key={course.id}>
+              <Course
+                courseTitle={course.title}
+                unitsComplete={calculateCompletedUnits(course.units)}
+                totalUnits={course.units.length}
+                courseId={course.id}
+              />
+            </li>
+          );
+        })}
+      </Sidebar>
 
       <main className="mainContent">
         {state.currentCourse.units !== undefined ? (

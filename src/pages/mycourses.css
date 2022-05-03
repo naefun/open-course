@@ -5,28 +5,6 @@
   grid-template-areas: "side main main main";
 }
 
-.sideBar {
-  background-color: #eee;
-  grid-area: side;
-  padding: 1rem;
-  overflow-y: scroll;
-}
-
-.sideBar li {
-  list-style: none;
-}
-
-.sideBar ul {
-  margin: 0;
-  padding: 0;
-}
-
-.courseList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
 .mainContent {
   background-color: #777;
   grid-area: main;

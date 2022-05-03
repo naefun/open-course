@@ -1,0 +1,156 @@
+{
+  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" },
+  "courses": [
+    {
+      "id": "246gsyg",
+      "title": "Learn react",
+      "description": "good react course",
+      "units": [
+        {
+          "id": 1,
+          "title": "Introduction",
+          "lessons": [
+            {
+              "id": 1,
+              "position": 1,
+              "title": "what is react",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            },
+            {
+              "id": 2,
+              "position": 3,
+              "title": "what is react 3",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            },
+            {
+              "id": 3,
+              "position": 2,
+              "title": "what is react 2",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ef4433d",
+      "title": "Learn angular",
+      "description": "good angular course",
+      "units": [
+        {
+          "id": 1,
+          "title": "Introduction",
+          "lessons": [
+            {
+              "id": 1,
+              "position": 3,
+              "title": "what is angular 3",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            },
+            {
+              "id": 2,
+              "position": 1,
+              "title": "what is angular",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": true
+            },
+            {
+              "id": 3,
+              "position": 2,
+              "title": "what is angular 2",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rgg543",
+      "title": "Learn vue",
+      "description": "good vue course",
+      "units": [
+        {
+          "id": 1,
+          "title": "Introduction",
+          "lessons": [
+            {
+              "id": 1,
+              "position": 1,
+              "title": "what is vue",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            },
+            {
+              "id": 2,
+              "position": 2,
+              "title": "what is vue 2",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            },
+            {
+              "id": 3,
+              "position": 3,
+              "title": "what is vue 3",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Basics",
+          "lessons": [
+            {
+              "id": 1,
+              "position": 1,
+              "title": "what is vue basics",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rferfrg9",
+      "title": "Learn spring",
+      "description": "good spring course",
+      "units": [
+        {
+          "id": 1,
+          "title": "Introduction",
+          "lessons": [
+            {
+              "id": 1,
+              "position": 2,
+              "title": "what is spring 2",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            },
+            {
+              "id": 2,
+              "position": 3,
+              "title": "what is spring 3",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            },
+            {
+              "id": 3,
+              "position": 1,
+              "title": "what is spring",
+              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

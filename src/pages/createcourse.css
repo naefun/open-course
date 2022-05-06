@@ -1,0 +1,37 @@
+.container__createcourse {
+  padding: 1rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.stepNumber {
+  background: #c4c4c4;
+  padding: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  border-radius: 100%;
+}
+.stepNumber p {
+  margin: 0;
+  margin-bottom: 0.2rem;
+}
+
+.currentStep {
+  background: #efefef;
+}

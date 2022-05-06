@@ -38,14 +38,14 @@
               "position": 2,
               "title": "what is react 2",
               "youtubeVideoId": "dQw4w9WgXcQ",
-              "completed": false
+              "completed": true
             },
             {
               "id": "2no3dg",
               "position": 3,
               "title": "what is react 3",
               "youtubeVideoId": "dQw4w9WgXcQ",
-              "completed": false
+              "completed": true
             }
           ]
         }
@@ -113,7 +113,7 @@
               "position": 3,
               "title": "what is vue 3",
               "youtubeVideoId": "dQw4w9WgXcQ",
-              "completed": false
+              "completed": true
             }
           ]
         },
@@ -247,6 +247,14 @@
       "lessonId": "wrvr33",
       "content": "this is a great song",
       "id": "kmxSneJ"
+    },
+    {
+      "userId": "test",
+      "courseId": "246gsyg",
+      "unitId": 1,
+      "lessonId": "2no3dg",
+      "content": "this is a note",
+      "id": "yqzys_D"
     }
   ]
 }

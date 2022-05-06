@@ -8,6 +8,7 @@ import CourseArea from "./pages/CourseArea";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import GlobalState from "./context/GlobalState";
+import CreateCourse from "./pages/CreateCourse";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/course/:id" element={<CourseArea />} />
+            <Route path="/createcourse" element={<CreateCourse />} />
           </Routes>
         </div>
         <Footer className="footer" />

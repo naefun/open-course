@@ -18,6 +18,9 @@ export const Navbar = () => {
         <li>
           <Link to="/dashboard">Dashboard</Link>
         </li>
+        <li>
+          <Link to="/createcourse">Create course</Link>
+        </li>
       </ul>
     </header>
   );

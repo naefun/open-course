@@ -1,7 +1,21 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" },
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
   "courses": [
     {
       "id": "246gsyg",
@@ -13,24 +27,24 @@
           "title": "Introduction",
           "lessons": [
             {
-              "id": 1,
+              "id": "wrvr33",
               "position": 1,
               "title": "what is react",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-              "completed": false
+              "youtubeVideoId": "dQw4w9WgXcQ",
+              "completed": true
             },
             {
-              "id": 2,
-              "position": 3,
-              "title": "what is react 3",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-              "completed": false
-            },
-            {
-              "id": 3,
+              "id": "eqff42fwr",
               "position": 2,
               "title": "what is react 2",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "youtubeVideoId": "dQw4w9WgXcQ",
+              "completed": false
+            },
+            {
+              "id": "2no3dg",
+              "position": 3,
+              "title": "what is react 3",
+              "youtubeVideoId": "dQw4w9WgXcQ",
               "completed": false
             }
           ]
@@ -47,24 +61,24 @@
           "title": "Introduction",
           "lessons": [
             {
-              "id": 1,
-              "position": 3,
-              "title": "what is angular 3",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-              "completed": false
-            },
-            {
-              "id": 2,
+              "id": "fsuivgui88",
               "position": 1,
               "title": "what is angular",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "youtubeVideoId": "dQw4w9WgXcQ",
               "completed": true
             },
             {
-              "id": 3,
+              "id": "ihd8vdvh",
               "position": 2,
               "title": "what is angular 2",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "youtubeVideoId": "dQw4w9WgXcQ",
+              "completed": true
+            },
+            {
+              "id": "oirwuv7rf",
+              "position": 3,
+              "title": "what is angular 3",
+              "youtubeVideoId": "dQw4w9WgXcQ",
               "completed": true
             }
           ]
@@ -81,24 +95,24 @@
           "title": "Introduction",
           "lessons": [
             {
-              "id": 1,
+              "id": "ihsdv8sd7g",
               "position": 1,
               "title": "what is vue",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-              "completed": false
+              "youtubeVideoId": "dQw4w9WgXcQ",
+              "completed": true
             },
             {
-              "id": 2,
+              "id": "insduv7",
               "position": 2,
               "title": "what is vue 2",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-              "completed": false
+              "youtubeVideoId": "DmeUuoxyt_E",
+              "completed": true
             },
             {
-              "id": 3,
+              "id": "Okd9vud",
               "position": 3,
               "title": "what is vue 3",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "youtubeVideoId": "dQw4w9WgXcQ",
               "completed": false
             }
           ]
@@ -108,10 +122,10 @@
           "title": "Basics",
           "lessons": [
             {
-              "id": 1,
+              "id": "nidv8dy",
               "position": 1,
               "title": "what is vue basics",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "youtubeVideoId": "dQw4w9WgXcQ",
               "completed": true
             }
           ]
@@ -128,29 +142,111 @@
           "title": "Introduction",
           "lessons": [
             {
-              "id": 1,
+              "id": "nid8vyv",
               "position": 2,
               "title": "what is spring 2",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "youtubeVideoId": "dQw4w9WgXcQ",
               "completed": false
             },
             {
-              "id": 2,
+              "id": "jiudvy",
               "position": 3,
               "title": "what is spring 3",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "youtubeVideoId": "dQw4w9WgXcQ",
               "completed": false
             },
             {
-              "id": 3,
+              "id": "md8dyv88syv",
               "position": 1,
               "title": "what is spring",
-              "lesson-url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "youtubeVideoId": "dQw4w9WgXcQ",
               "completed": false
             }
           ]
         }
       ]
+    }
+  ],
+  "notes": [
+    {
+      "id": "wdvr33",
+      "userId": "wdvr33",
+      "courseId": "dsv4wf",
+      "unitId": "dsv4wf",
+      "lessonId": "dsv4wf",
+      "content": "11111"
+    },
+    {
+      "userId": "rgrwg",
+      "courseId": "d42f2frsv4wf",
+      "unitId": "dsvvrv4wf",
+      "lessonId": "dsvrvwrv4wf",
+      "content": "this is a great course TEST",
+      "id": "0zjid9q"
+    },
+    {
+      "userId": "TEST",
+      "courseId": "TEST",
+      "unitId": "TEST",
+      "lessonId": "TEST",
+      "content": "this is a great TEST 1",
+      "id": "ZWzHGdg"
+    },
+    {
+      "userId": "TEST",
+      "courseId": "TEST",
+      "unitId": "TEST",
+      "lessonId": "TEST",
+      "content": "im making a note of this",
+      "id": "3B7110F"
+    },
+    {
+      "userId": "test",
+      "courseId": "rgg543",
+      "unitId": 1,
+      "lessonId": 1,
+      "content": "some note goes here",
+      "id": "WbWPp4A"
+    },
+    {
+      "userId": "test",
+      "courseId": "rgg543",
+      "unitId": 1,
+      "lessonId": "ihsdv8sd7g",
+      "content": "edvfwv",
+      "id": "2D031f8"
+    },
+    {
+      "userId": "test",
+      "courseId": "rgg543",
+      "unitId": 3,
+      "lessonId": "nidv8dy",
+      "content": "This is view basics",
+      "id": "49zqaF2"
+    },
+    {
+      "userId": "test",
+      "courseId": "rferfrg9",
+      "unitId": 1,
+      "lessonId": "nid8vyv",
+      "content": "spring 2",
+      "id": "WhsYkRd"
+    },
+    {
+      "userId": "test",
+      "courseId": "ef4433d",
+      "unitId": 1,
+      "lessonId": "fsuivgui88",
+      "content": "this is a great song",
+      "id": "jjIxb4F"
+    },
+    {
+      "userId": "test",
+      "courseId": "246gsyg",
+      "unitId": 1,
+      "lessonId": "wrvr33",
+      "content": "this is a great song",
+      "id": "kmxSneJ"
     }
   ]
 }

@@ -2,6 +2,7 @@
   background-color: #0000004b;
   padding: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .course h3 {

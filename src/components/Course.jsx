@@ -22,9 +22,6 @@ function Course(props) {
       <p>
         {unitsComplete}/{totalUnits} units
       </p>
-      <p>
-        course id: {courseId} <em>remove after implementing</em>
-      </p>
     </div>
   );
 }

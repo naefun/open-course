@@ -56,23 +56,6 @@ function MyCourses() {
 
   return (
     <div className="myCoursesContainer">
-      {/* <aside className="sideBar">
-        <h2>Courses</h2>
-        <ul className="courseList">
-          {myCourses.map((course, i) => {
-            return (
-              <li key={course.id}>
-                <Course
-                  courseTitle={course.title}
-                  unitsComplete={calculateCompletedUnits(course.units)}
-                  totalUnits={course.units.length}
-                  courseId={course.id}
-                />
-              </li>
-            );
-          })}
-        </ul>
-      </aside> */}
       <Sidebar title="Courses">
         {myCourses.map((course, i) => {
           return (

@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: 14rem auto auto auto;
+  grid-template-rows: 100vh;
+  grid-template-areas: "side main main main";
+}
+
+.mainContent {
+  background-color: #777;
+  grid-area: main;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.unit {
+  background-color: #0000004b;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.video {
+  width: 100%;
+  height: 50vh;
+}

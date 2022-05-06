@@ -9,6 +9,7 @@ function Unit(props) {
   const title = props.title;
   const lessons = props.lessons;
   const courseId = props.courseId;
+  const unitId = props.unitId;
 
   const [showLessons, setShowLessons] = useState(false);
 
@@ -50,7 +51,16 @@ function Unit(props) {
                 return (
                   <li key={lesson.id}>
                     <span>{lesson.completed ? "✅ " : ""}</span>
-                    <Link to={"/course/" + courseId + "?lessonId=" + lesson.id}>
+                    <Link
+                      to={
+                        "/course/" +
+                        courseId +
+                        "?lessonId=" +
+                        lesson.id +
+                        "&unitId=" +
+                        unitId
+                      }
+                    >
                       {lesson.title}
                     </Link>
                   </li>

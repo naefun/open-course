@@ -107,6 +107,7 @@ function MyCourses() {
                       title={unit.title}
                       lessons={unit.lessons}
                       courseId={state.currentCourse.id}
+                      unitId={unit.id}
                     />
                   </li>
                 );

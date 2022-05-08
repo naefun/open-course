@@ -10,6 +10,21 @@ const Reducer = (state, action) => {
         ...state,
         currentCourse: action.payload,
       };
+    case "CREATE_COURSE":
+      return {
+        ...state,
+        createCourseSwitch: [action.payload],
+      };
+    case "CREATE_COURSE_ADD_LESSON":
+      return {
+        ...state,
+        createdCourseLessons: [...state.createdCourseLessons, action.payload],
+      };
+    case "CREATE_COURSE_ADD_UNIT":
+      return {
+        ...state,
+        createdCourseUnits: [...state.createdCourseUnits, action.payload],
+      };
     default:
       return state;
   }

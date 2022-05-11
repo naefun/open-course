@@ -13,7 +13,7 @@ const Reducer = (state, action) => {
     case "CREATE_COURSE":
       return {
         ...state,
-        createCourseSwitch: [action.payload],
+        createCourseSwitch: action.payload,
       };
     case "CREATE_COURSE_ADD_LESSON":
       return {
@@ -24,6 +24,13 @@ const Reducer = (state, action) => {
       return {
         ...state,
         createdCourseUnits: [...state.createdCourseUnits, action.payload],
+      };
+    case "RESET_CREATED_COURSE":
+      return {
+        ...state,
+        createdCourseUnits: [],
+        createdCourseLessons: [],
+        createCourseSwitch: false,
       };
     default:
       return state;

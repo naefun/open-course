@@ -6,6 +6,8 @@ import { createCourse } from "../context/actions/CourseActions";
 import AddUnit from "../components/AddUnit";
 import { v4 as uuidv4 } from "uuid";
 import { Context } from "../context/GlobalState";
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 function CreateCourse() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -13,7 +15,9 @@ function CreateCourse() {
   const [description, setDescription] = useState("");
   const [units, setUnits] = useState([]);
   const [showExitPrompt, setShowExitPrompt] = useState(true);
+  const [createdCourseId, setCreatedCourseId] = useState("");
   const [state, dispatch] = useContext(Context);
+  const navigate = useNavigate();
 
   window.onload = function () {
     initBeforeUnLoad(showExitPrompt);
@@ -40,6 +44,7 @@ function CreateCourse() {
   useEffect(() => {
     const unitId = uuidv4();
     setUnits([{ id: unitId, unit: <AddUnit id={unitId} /> }]);
+    console.log("LOGGIN CREATED COURSE ID: " + createdCourseId);
   }, []);
 
   const handleStepOne = (e) => {
@@ -109,13 +114,33 @@ function CreateCourse() {
     setUnits(updatedUnitsList);
   };
 
+  const navigateToCourse = () => {
+    const courseId = createdCourseId;
+    cleanup();
+    navigate("/course/" + courseId, {
+      replace: true,
+    });
+  };
+
   useEffect(() => {
+    // final step of the create course process
     if (units.length === state.createdCourseUnits.length && units.length > 0) {
-      createCourse(
-        createCourseObject(title, description, state.createdCourseUnits)
-      );
+      const res = async () => {
+        const result = await createCourse(
+          createCourseObject(title, description, state.createdCourseUnits)
+        );
+        console.log(result.id);
+        setCreatedCourseId(result.id);
+      };
+
+      res();
     }
   }, [state.createdCourseUnits, units, description, title]);
+
+  const cleanup = () => {
+    // setCreatedCourseId("");
+    dispatch({ type: "RESET_CREATED_COURSE" });
+  };
 
   return (
     <div className="container__createcourse">
@@ -191,6 +216,8 @@ function CreateCourse() {
           <input type="submit" value="Next" />
         </form>
       )}
+
+      {createdCourseId === "" ? <></> : <>{navigateToCourse()}</>}
     </div>
   );
 }

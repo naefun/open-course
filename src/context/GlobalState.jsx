@@ -4,6 +4,9 @@ import { createContext, useReducer } from "react";
 const initialState = {
   course: "",
   currentCourse: {},
+  createCourseSwitch: false,
+  createdCourseLessons: [],
+  createdCourseUnits: [],
 };
 
 const GlobalState = ({ children }) => {

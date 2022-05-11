@@ -7,6 +7,7 @@ import YouTube from "react-youtube";
 import Sidebar from "../components/Sidebar";
 import Unit from "../components/Unit";
 import "./coursearea.css";
+import { useNavigate } from "react-router-dom";
 
 function CourseArea() {
   let { id } = useParams();
@@ -18,6 +19,7 @@ function CourseArea() {
   const [currentLesson, setCurrentLesson] = useState({});
   const [userId, setUserId] = useState("test");
   const [currentLessonCompleted, setcurrentLessonCompleted] = useState(false);
+  let navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -59,6 +61,22 @@ function CourseArea() {
   const setUnitLesson = (courseData) => {
     const unitId = searchParams.get("unitId");
     const lessonId = searchParams.get("lessonId");
+
+    console.log(unitId);
+    if (unitId === null) {
+      console.log("The unit id is null");
+      navigate(
+        "/course/" +
+          id +
+          "?unitId=" +
+          courseData.units[0].id +
+          "&lessonId=" +
+          courseData.units[0].lessons[0].id,
+        {
+          replace: true,
+        }
+      );
+    }
 
     const myUnit = courseData.units.filter((unit) => unit.id == unitId)[0];
     const myLesson = myUnit.lessons.filter(
@@ -185,7 +203,7 @@ function CourseArea() {
   return (
     <div className="container">
       <Sidebar title={course.title}>
-        {course.units != undefined ? (
+        {course.units !== undefined ? (
           <>
             {course.units.map((unit, i) => {
               return (

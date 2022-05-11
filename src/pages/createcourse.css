@@ -1,5 +1,6 @@
 .container__createcourse {
   padding: 1rem;
+  min-height: 100vh;
 }
 
 .steps {
@@ -12,14 +13,14 @@
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  padding: 0.2rem 0.5rem;
+  border-radius: 100px;
+  padding-right: 1rem;
 }
 
 .stepNumber {
   background: #c4c4c4;
-  padding: 0.5rem;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 2rem;
+  height: 2rem;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -27,11 +28,46 @@
   line-height: 0;
   border-radius: 100%;
 }
-.stepNumber p {
-  margin: 0;
-  margin-bottom: 0.2rem;
+
+.stepTitle {
+  margin: auto;
 }
 
 .currentStep {
   background: #efefef;
+}
+
+.createCourseInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.createCourseInputs label {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  gap: 1rem;
+}
+
+.createCourseInputs textarea {
+  resize: none;
+}
+
+.addedUnits {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.courseUnit {
+  position: relative;
+  max-width: 50rem;
+}
+
+.removeUnitButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
 }

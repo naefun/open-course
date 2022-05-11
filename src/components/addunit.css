@@ -1,0 +1,38 @@
+.createUnitInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.createUnitInputs label {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  gap: 1rem;
+}
+
+.createUnitInputs textarea {
+  resize: none;
+}
+
+.addUnit {
+  background: #ccc;
+  width: auto;
+  padding: 1rem;
+}
+
+.unitLessons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.unitLesson {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.addLesson {
+  margin-top: 0.5rem;
+}

@@ -10,6 +10,7 @@ function Course(props) {
   let unitsComplete = props.unitsComplete;
   let totalUnits = props.totalUnits;
   let courseId = props.courseId;
+  let activeCourseClass = state.course === courseId ? "course-active" : "";
 
   const setCourseIdState = () => {
     dispatch({ type: "SET_COURSE", payload: courseId });
@@ -17,7 +18,7 @@ function Course(props) {
   };
 
   return (
-    <div className="course" onClick={setCourseIdState}>
+    <div className={"course " + activeCourseClass} onClick={setCourseIdState}>
       <h3>{courseTitle}</h3>
       <p>
         {unitsComplete}/{totalUnits} units

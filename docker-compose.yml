@@ -1,10 +1,5 @@
 services:
   opencourseapi:
-<<<<<<< HEAD
-    ports:
-      - "5000:5000"
-    image: opencourse.azurecr.io/opencourseapi:latest
-=======
     image: opencourse.azurecr.io/opencourseapi:latest
     environment:
       MONGODB_HOST: mongodb://mongo
@@ -14,7 +9,6 @@ services:
       - 5000:5000
     depends_on:
       - mongo
->>>>>>> bc58682 (allow api to connect to database)
   mongo:
     image: mongo:latest
     environment:
@@ -34,17 +28,10 @@ services:
       ME_CONFIG_MONGODB_AUTH_PASSWORD: rootpassword
       ME_CONFIG_BASICAUTH_USERNAME: dev
       ME_CONFIG_BASICAUTH_PASSWORD: dev
-<<<<<<< HEAD
-    depends_on:
-      - mongo
-    ports:
-      - "8888:8081"
-=======
     ports:
       - 8888:8081
     depends_on:
       - mongo
->>>>>>> bc58682 (allow api to connect to database)
 
 volumes:
   mongodb_data_container:

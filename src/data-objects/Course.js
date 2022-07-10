@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 export const createCourseObject = (title, description, units) => {
   let unitsToAdd = [];
   if (units !== undefined && units.length > 0) {
-    unitsToAdd = units;
+    unitsToAdd = [...units];
   }
 
   const course = {

@@ -10,21 +10,14 @@ Install dependencies
 npm install
 ```
 
-Install json-server  
-_used as a local db and provides endpoints_
+Spin up the docker containers  
+_Note: The docker containers includes the mongo database and the REST api used to interact with it._
 
 ```
-npm install -g json-server
-```
-
-Run the local db (json-server)
-
-```
-json-server --watch db.json
+docker-compose up
 ```
 
 Run the app  
-_if prompted, accept to run on a different port (original is 3000, might ask for 3001 or something similar)_
 
 ```
 npm start

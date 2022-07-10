@@ -23,7 +23,7 @@ function CourseArea() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/courses/" + id)
+      .get("http://localhost:5000/api/v1/courses/" + id)
       .then((response) => {
         const courseData = response.data;
         console.log("getting course");
@@ -49,10 +49,10 @@ function CourseArea() {
   };
 
   const setNoteContentIfExists = async () => {
-    const notes = await lessonHasNote();
-    if (notes.length > 0) {
-      console.log(notes[0].content);
-      setNoteContent(notes[0].content);
+    const note = await lessonHasNote();
+    if (note.content != undefined) {
+      console.log(note.content);
+      setNoteContent(note.content);
     } else {
       setNoteContent("");
     }
@@ -90,7 +90,7 @@ function CourseArea() {
 
   const lessonHasNote = async () => {
     const res = await axios
-      .get("http://localhost:3000/notes", {
+      .get("http://localhost:5000/api/v1/notes", {
         params: {
           lessonId: searchParams.get("lessonId"),
           userId: userId,
@@ -110,24 +110,24 @@ function CourseArea() {
     e.preventDefault();
     const notes = await lessonHasNote();
     // check if note already exists for this lesson
-    if (notes.length === 0) {
+    if (notes.length === 0 || notes.content == undefined) {
       // if it doesnt then create new note
       console.log("creating note");
       createNote();
-    } else {
+    }else {
       // else update existing note
       console.log("updating note");
-      updateNote(notes[0].id);
+      updateNote(notes);
     }
   };
 
   const createNote = () => {
     axios
-      .post("http://localhost:3000/notes", {
-        userId: "test",
-        courseId: course.id,
-        unitId: currentUnit.id,
-        lessonId: currentLesson.id,
+      .post("http://localhost:5000/api/v1/notes", {
+        user_id: "test",
+        course_id: course.id,
+        unit_id: currentUnit.id,
+        lesson_id: currentLesson.id,
         content: noteContent,
       })
       .then((response) => {
@@ -136,10 +136,15 @@ function CourseArea() {
       .catch((error) => {});
   };
 
-  const updateNote = (noteId) => {
+  const updateNote = (note) => {
     axios
-      .patch("http://localhost:3000/notes/" + noteId, {
-        content: noteContent,
+      .put("http://localhost:5000/api/v1/notes", {
+        id: note.id,
+        user_id: note.user_id,
+        course_id: note.course_id,
+        unit_id: note.unit_id,
+        lesson_id: note.lesson_id,
+        content: noteContent
       })
       .then((response) => {
         console.log(response);
@@ -185,7 +190,7 @@ function CourseArea() {
     console.log(updatedCourse);
     axios({
       method: "put",
-      url: "http://localhost:3000/courses/" + id,
+      url: "http://localhost:5000/api/v1/courses/" +id,
       data: updatedCourse,
     });
   };

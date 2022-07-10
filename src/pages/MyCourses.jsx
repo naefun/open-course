@@ -12,7 +12,7 @@ function MyCourses() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/courses/")
+      .get("http://localhost:5000/api/v1/courses")
       .then((response) => {
         const coursesData = response.data;
         console.log("getting courses");
@@ -23,7 +23,7 @@ function MyCourses() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/courses/" + state.course)
+      .get("http://localhost:5000/api/v1/courses/" + state.course)
       .then((response) => {
         const courseData = response.data;
         console.log("setting current course");

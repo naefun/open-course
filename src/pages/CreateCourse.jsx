@@ -129,8 +129,8 @@ function CreateCourse() {
         const result = await createCourse(
           createCourseObject(title, description, state.createdCourseUnits)
         );
-        console.log(result.id);
-        setCreatedCourseId(result.id);
+        console.log(result._id.$oid);
+        setCreatedCourseId(result._id.$oid);
       };
 
       res();
